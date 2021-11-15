@@ -25,7 +25,6 @@ SOURCES += \
     offbtn_panel.cpp \
     qssmanager.cpp \
     temparc.cpp \
-    timedelay.cpp \
     winddirbtns_panel.cpp \
     windspeedbtns_panel.cpp
 
@@ -39,7 +38,6 @@ HEADERS += \
     offbtn_panel.h \
     qssmanager.h \
     temparc.h \
-    timedelay.h \
     winddirbtns_panel.h \
     windspeedbtns_panel.h
 

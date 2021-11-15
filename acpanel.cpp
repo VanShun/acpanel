@@ -67,17 +67,12 @@ AcPanel::~AcPanel()
 void AcPanel::SetLayout()
 {
     m_arc = new TempArc(this);
-    //QSizePolicy sizepolicy = m_arc->sizePolicy();
-    //m_arc->setMinimumSize(280, 280);
-    //sizepolicy.setHorizontalPolicy(QSizePolicy::Fixed);
-    //sizepolicy.setVerticalPolicy(QSizePolicy::Fixed);
-    //m_arc->setSizePolicy(sizepolicy);
     m_arc->setFixedSize(230, 230);
 
-    m_pBtn_Minus = new QPushButton(this);
-    m_pBtn_Minus->setFixedSize(PBTN_SIZE);
     QFont font = this->font();
     font.setPointSize(30);
+    m_pBtn_Minus = new QPushButton(this);
+    m_pBtn_Minus->setFixedSize(PBTN_SIZE);
     m_pBtn_Minus->setFont(font);
     m_pBtn_Minus->setText("-");
     m_pBtn_Minus->setObjectName(QString("m_pBtn_Minus"));
