@@ -1,0 +1,38 @@
+QLabel#m_label_showtime {
+    font-family:"Times New Roman",Georgia,Serif;
+    font-size:15px;
+    border-image: url(:/resources/images/homepage/time_show.png);
+}
+
+QLabel#m_label_sleepmode {
+    border-image: url(:/resources/images/homepage/sleepmode.png);
+}
+
+QPushButton#m_pBtn_timerset {
+    font-family:"Times New Roman",Georgia,Serif;
+    font-size:12px;
+    border-image: url(:/resources/images/homepage/timerset_show.png);
+    text-align:center
+}
+
+QPushButton#m_pBtn_Add {
+    border-radius: 25px;
+    background-color:#dcdcdc;
+    color:white
+}
+
+QPushButton#m_pBtn_Add:hover,pressed {
+    border-width:3px;
+    border-color:white
+}
+
+QPushButton#m_pBtn_Minus {
+    border-radius: 25px;
+    background-color:#dcdcdc;
+    color:white
+}
+
+
+QDoubleSpinBox#m_timerset {
+    border-radius:15px
+}

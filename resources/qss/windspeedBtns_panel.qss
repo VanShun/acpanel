@@ -1,0 +1,35 @@
+QPushButton#m_pBtn_low {
+    border-image: url(:/resources/images/windspeed/windspeed_g1.png);
+}
+
+QPushButton#m_pBtn_low:hover,pressed{
+    border-image: url(:/resources/images/windspeed/windspeed_g1_pressed.png);
+}
+
+QPushButton#m_pBtn_mid {
+    border-image: url(:/resources/images/windspeed/windspeed_g2.png);
+}
+
+QPushButton#m_pBtn_mid:hover,pressed{
+    border-image: url(:/resources/images/windspeed/windspeed_g2_pressed.png);
+}
+
+QPushButton#m_pBtn_high {
+    border-image: url(:/resources/images/windspeed/windspeed_g3.png);
+}
+
+QPushButton#m_pBtn_high:hover,pressed{
+    border-image: url(:/resources/images/windspeed/windspeed_g3_pressed.png);
+}
+
+QPushButton#m_pBtn_auto {
+    border-image: url(:/resources/images/windspeed/windspeed_auto.png);
+}
+
+QPushButton#m_pBtn_auto:hover,pressed{
+    border-image: url(:/resources/images/windspeed/windspeed_auto_pressed.png);
+}
+
+QPushButton#m_pBtn_hide {
+    border-image: url(:/resources/images/homepage/hide.png);
+}

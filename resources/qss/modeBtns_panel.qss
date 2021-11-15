@@ -1,0 +1,43 @@
+QPushButton#m_pBtn_cold {
+    border-image: url(:/resources/images/mode/mode_cold.png);
+}
+
+QPushButton#m_pBtn_cold:hover,pressed{
+    border-image: url(:/resources/images/mode/mode_cold_pressed.png);
+}
+
+QPushButton#m_pBtn_blow {
+    border-image: url(:/resources/images/mode/mode_wind.png);
+}
+
+QPushButton#m_pBtn_blow:hover,pressed{
+    border-image: url(:/resources/images/mode/mode_wind_pressed.png);
+}
+
+QPushButton#m_pBtn_heat {
+    border-image: url(:/resources/images/mode/mode_heat.png);
+}
+
+QPushButton#m_pBtn_heat:hover,pressed{
+    border-image: url(:/resources/images/mode/mode_heat_pressed.png);
+}
+
+QPushButton#m_pBtn_dehumid {
+    border-image: url(:/resources/images/mode/mode_dehumid.png);
+}
+
+QPushButton#m_pBtn_dehumid:hover,pressed{
+    border-image: url(:/resources/images/mode/mode_dehumid_pressed.png);
+}
+
+QPushButton#m_pBtn_auto {
+    border-image: url(:/resources/images/mode/mode_auto.png);
+}
+
+QPushButton#m_pBtn_auto:hover,pressed{
+    border-image: url(:/resources/images/mode/mode_auto_pressed.png);
+}
+
+QPushButton#m_pBtn_hide {
+    border-image: url(:/resources/images/homepage/hide.png);
+}

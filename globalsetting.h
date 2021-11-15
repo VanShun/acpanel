@@ -1,0 +1,8 @@
+#ifndef GLOBALSETTING_H
+#define GLOBALSETTING_H
+
+#define RESOLUTION_X 800
+#define RESOLUTION_Y 480
+#define PBTN_SIZE 50, 50
+#define PBTN_WIDTH 50
+#endif // GLOBALSETTING_H

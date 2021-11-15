@@ -1,0 +1,27 @@
+QPushButton#m_pBtn_updown {
+    border-image: url(:/resources/images/winddir/windir_updown.png);
+}
+
+QPushButton#m_pBtn_updown:hover,pressed{
+    border-image: url(:/resources/images/winddir/windir_updown_pressed.png);
+}
+
+QPushButton#m_pBtn_leftright {
+    border-image: url(:/resources/images/winddir/windir_leftright.png);
+}
+
+QPushButton#m_pBtn_leftright:hover,pressed{
+    border-image: url(:/resources/images/winddir/windir_leftright_pressed.png);
+}
+
+QPushButton#m_pBtn_cycle {
+    border-image: url(:/resources/images/winddir/windir_cycle.png);
+}
+
+QPushButton#m_pBtn_cycle:hover,pressed{
+    border-image: url(:/resources/images/winddir/windir_cycle_pressed.png);
+}
+
+QPushButton#m_pBtn_hide {
+    border-image: url(:/resources/images/homepage/hide.png);
+}
