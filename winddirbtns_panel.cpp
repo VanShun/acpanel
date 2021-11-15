@@ -15,24 +15,26 @@ WindDirBtns_Panel::WindDirBtns_Panel(QWidget *parent) : QWidget(parent)
     m_pBtn_updown->setObjectName("m_pBtn_updown");
     //m_pBtn_updown->setStyleSheet("border-image: url(:/resources/images/winddir/windir_updown.png);");
     m_txt_updown = new QLabel(this);
-    m_txt_updown->setFixedSize(58, 20);
+    m_txt_updown->setFixedSize(65, 20);
     m_txt_updown->setText(QString("上下扫风"));
     m_txt_updown->setAlignment(Qt::AlignHCenter);
     QVBoxLayout *vlayout1 = new QVBoxLayout();
     vlayout1->addWidget(m_pBtn_updown);
     vlayout1->addWidget(m_txt_updown);
+    vlayout1->setAlignment(m_pBtn_updown, Qt::AlignCenter);
 
     m_pBtn_leftright = new QPushButton(this);
     m_pBtn_leftright->setFixedSize(PBTN_SIZE);
     m_pBtn_leftright->setObjectName("m_pBtn_leftright");
     //m_pBtn_leftright->setStyleSheet("border-image: url(:/resources/images/winddir/windir_leftright.png);");
     m_txt_leftright = new QLabel(this);
-    m_txt_leftright->setFixedSize(58, 20);
+    m_txt_leftright->setFixedSize(65, 20);
     m_txt_leftright->setText(QString("左右扫风"));
     m_txt_leftright->setAlignment(Qt::AlignHCenter);
     QVBoxLayout *vlayout2 = new QVBoxLayout();
     vlayout2->addWidget(m_pBtn_leftright);
     vlayout2->addWidget(m_txt_leftright);
+    vlayout2->setAlignment(m_pBtn_leftright, Qt::AlignCenter);
 
     m_pBtn_cycle = new QPushButton(this);
     m_pBtn_cycle->setFixedSize(PBTN_SIZE);
@@ -53,15 +55,15 @@ WindDirBtns_Panel::WindDirBtns_Panel(QWidget *parent) : QWidget(parent)
 
 
     QHBoxLayout *hlayout = new QHBoxLayout();
+    //hlayout->addSpacing(10);
     hlayout->addStretch();
-    hlayout->addSpacing(5);
     hlayout->addLayout(vlayout1);
     hlayout->addStretch();
     hlayout->addLayout(vlayout2);
     hlayout->addStretch();
     hlayout->addLayout(vlayout3);
-    hlayout->addSpacing(15);
     hlayout->addStretch();
+    //hlayout->addSpacing(10);
 
 
     QVBoxLayout *vlayout = new QVBoxLayout();
@@ -69,7 +71,7 @@ WindDirBtns_Panel::WindDirBtns_Panel(QWidget *parent) : QWidget(parent)
     vlayout->addWidget(m_pBtn_hide);
     vlayout->setAlignment(m_pBtn_hide, Qt::AlignHCenter);
     m_gbox = new QGroupBox(this);
-    m_gbox->setFixedSize(800, 140);
+    m_gbox->setFixedSize(780, 140);
     m_gbox->setLayout(vlayout);
 
     this->setVisible(false);

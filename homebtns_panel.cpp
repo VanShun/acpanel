@@ -60,7 +60,7 @@ HomeBtns_Panel::HomeBtns_Panel(QWidget *parent) : QWidget(parent)
     vlayout4->addWidget(m_txt_others);
 
     QHBoxLayout *hlayout = new QHBoxLayout();
-    hlayout->addSpacing(5);
+    hlayout->addStretch();
     hlayout->addLayout(vlayout1);
     hlayout->addStretch();
     hlayout->addLayout(vlayout2);
@@ -70,7 +70,7 @@ HomeBtns_Panel::HomeBtns_Panel(QWidget *parent) : QWidget(parent)
     hlayout->addLayout(vlayout3);
     hlayout->addStretch();
     hlayout->addLayout(vlayout4);
-    hlayout->addSpacing(5);
+    hlayout->addStretch();
     m_gbox = new QGroupBox(this);
     m_gbox->setFixedSize(800, 110);
     m_gbox->setLayout(hlayout);

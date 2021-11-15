@@ -65,7 +65,8 @@ WindSpeedBtns_Panel::WindSpeedBtns_Panel(QWidget *parent) : QWidget(parent)
     //m_pBtn_hide->setStyleSheet("border-image: url(:/resources/images/homepage/hide.png);");
 
     QHBoxLayout *hlayout = new QHBoxLayout();
-    hlayout->addSpacing(5);
+    //hlayout->addSpacing(10);
+    hlayout->addStretch();
     hlayout->addLayout(vlayout1);
     hlayout->addStretch();
     hlayout->addLayout(vlayout2);
@@ -73,14 +74,15 @@ WindSpeedBtns_Panel::WindSpeedBtns_Panel(QWidget *parent) : QWidget(parent)
     hlayout->addLayout(vlayout3);
     hlayout->addStretch();
     hlayout->addLayout(vlayout4);
-    hlayout->addSpacing(10);
+    hlayout->addStretch();
+    //hlayout->addSpacing(10);
 
     QVBoxLayout *vlayout = new QVBoxLayout();
     vlayout->addLayout(hlayout);
     vlayout->addWidget(m_pBtn_hide);
     vlayout->setAlignment(m_pBtn_hide, Qt::AlignHCenter);
     m_gbox = new QGroupBox(this);
-    m_gbox->setFixedSize(800, 140);
+    m_gbox->setFixedSize(780, 140);
     m_gbox->setLayout(vlayout);
 
     this->setVisible(false);

@@ -71,7 +71,8 @@ ModeBtns_Panel::ModeBtns_Panel(QWidget *parent) : QWidget(parent)
     vlayout5->addWidget(m_txt_auto);
 
     QHBoxLayout *hlayout = new QHBoxLayout();
-    hlayout->addSpacing(5);
+    //hlayout->addSpacing(10);
+    hlayout->addStretch();
     hlayout->addLayout(vlayout1);
     hlayout->addStretch();
     hlayout->addLayout(vlayout2);
@@ -81,7 +82,8 @@ ModeBtns_Panel::ModeBtns_Panel(QWidget *parent) : QWidget(parent)
     hlayout->addLayout(vlayout4);
     hlayout->addStretch();
     hlayout->addLayout(vlayout5);
-    hlayout->addSpacing(10);
+    hlayout->addStretch();
+    //hlayout->addSpacing(10);
 
     m_pBtn_hide = new QPushButton(this);
     m_pBtn_hide->setFixedSize(PBTN_WIDTH, 20);
@@ -93,7 +95,7 @@ ModeBtns_Panel::ModeBtns_Panel(QWidget *parent) : QWidget(parent)
     vlayout->addWidget(m_pBtn_hide);
     vlayout->setAlignment(m_pBtn_hide, Qt::AlignHCenter);
     m_gbox = new QGroupBox(this);
-    m_gbox->setFixedSize(800, 140);
+    m_gbox->setFixedSize(780, 140);
     m_gbox->setLayout(vlayout);
 
     this->setVisible(false);
