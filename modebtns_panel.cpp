@@ -114,6 +114,20 @@ ModeBtns_Panel::~ModeBtns_Panel()
     delete m_qssmanager;
 }
 
+void ModeBtns_Panel::mousePressEvent(QMouseEvent *event)
+{
+    m_presspoint = event->pos();
+}
+
+void ModeBtns_Panel::mouseReleaseEvent(QMouseEvent *event)
+{
+    m_releasepoint = event->pos();
+    if (m_releasepoint.y() > m_presspoint.y()) {   //下滑隐藏菜单
+        this->hide();
+        pacpanel->showHomebtnsPanel();
+    }
+}
+
 void ModeBtns_Panel::on_m_pBtn_cold_clicked()
 {
     pacpanel->CtrlmodeChanged(AirCondCtrl::Cold);

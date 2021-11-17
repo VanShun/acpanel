@@ -88,6 +88,20 @@ WindDirBtns_Panel::~WindDirBtns_Panel()
     delete m_qssmanager;
 }
 
+void WindDirBtns_Panel::mousePressEvent(QMouseEvent *event)
+{
+    m_presspoint = event->pos();
+}
+
+void WindDirBtns_Panel::mouseReleaseEvent(QMouseEvent *event)
+{
+    m_releasepoint = event->pos();
+    if (m_releasepoint.y() > m_presspoint.y()) {   //下滑隐藏菜单
+        this->hide();
+        pacpanel->showHomebtnsPanel();
+    }
+}
+
 void WindDirBtns_Panel::on_m_pBtn_updown_clicked()
 {
     pacpanel->WindDirChanged(AirCondCtrl::WindDir_UpDown);

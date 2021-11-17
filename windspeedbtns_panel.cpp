@@ -100,6 +100,20 @@ WindSpeedBtns_Panel::~WindSpeedBtns_Panel()
     delete m_qssmanager;
 }
 
+void WindSpeedBtns_Panel::mousePressEvent(QMouseEvent *event)
+{
+    m_presspoint = event->pos();
+}
+
+void WindSpeedBtns_Panel::mouseReleaseEvent(QMouseEvent *event)
+{
+    m_releasepoint = event->pos();
+    if (m_releasepoint.y() > m_presspoint.y()) {   //下滑隐藏菜单
+        this->hide();
+        pacpanel->showHomebtnsPanel();
+    }
+}
+
 void WindSpeedBtns_Panel::on_m_pBtn_low_clicked()
 {
     pacpanel->WindSpeedChanged(AirCondCtrl::WindSpeed_Gear1);

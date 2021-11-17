@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QGroupBox>
 #include <QLabel>
+#include <QPoint>
 #include "qssmanager.h"
 
 class ModeBtns_Panel : public QWidget
@@ -14,6 +15,10 @@ public:
     explicit ModeBtns_Panel(QWidget *parent = nullptr);
     virtual ~ModeBtns_Panel();
 
+protected:
+    void mousePressEvent(QMouseEvent *event) override;
+
+    void mouseReleaseEvent(QMouseEvent *event) override;
 private slots:
     void on_m_pBtn_cold_clicked();
 
@@ -31,6 +36,7 @@ private:
     QLabel *m_txt_cold, *m_txt_blow, *m_txt_heat, *m_txt_dehumid, *m_txt_auto;
     QGroupBox *m_gbox;
     QssManager *m_qssmanager;
+    QPoint m_presspoint, m_releasepoint;
 };
 
 #endif // MODEBTNS_PANEL_H

@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QGroupBox>
 #include <QLabel>
+#include <QPoint>
 #include "qssmanager.h"
 
 class WindSpeedBtns_Panel : public QWidget
@@ -13,6 +14,10 @@ class WindSpeedBtns_Panel : public QWidget
 public:
     explicit WindSpeedBtns_Panel(QWidget *parent = nullptr);
     virtual ~WindSpeedBtns_Panel();
+protected:
+    void mousePressEvent(QMouseEvent *event) override;
+
+    void mouseReleaseEvent(QMouseEvent *event) override;
 public slots:
     void on_m_pBtn_low_clicked();
 
@@ -28,6 +33,7 @@ private:
     QLabel *m_txt_low, *m_txt_mid, *m_txt_high, *m_txt_auto;
     QGroupBox *m_gbox;
     QssManager *m_qssmanager;
+    QPoint m_presspoint, m_releasepoint;
 };
 
 #endif // WINDSPEEDBTNS_PANEL_H
