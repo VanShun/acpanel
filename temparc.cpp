@@ -1,9 +1,13 @@
 #include "temparc.h"
 #include "qmath.h"
+#include "acpanel.h"
 #include <QDebug>
+
+static AcPanel *pacpanel = nullptr;
 
 TempArc::TempArc(QWidget *parent) : QWidget(parent)
 {
+    pacpanel = (AcPanel*)this->parentWidget();
     m_startAngle = 240;  //0刻度的起始角度
     m_endAngle = 300;
     m_foreground = Qt::white;
@@ -92,6 +96,7 @@ void TempArc::mouseReleaseEvent(QMouseEvent *event)
     if (value > m_maxValue) value = m_maxValue;
     if (value < m_minValue) value = m_minValue;
     updateAngle_S(value);
+    pacpanel->updateSettedTemp(value);
 }
 
 void TempArc::drawCrown(QPainter *painter)

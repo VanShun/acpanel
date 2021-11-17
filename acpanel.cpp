@@ -321,6 +321,12 @@ void AcPanel::timerset_chgvalue(double value)
     }
 }
 
+void AcPanel::updateSettedTemp(double value)
+{
+    if (value > 30 || value < 18) return;
+    m_airCtrl->SetTemp(value);
+}
+
 /*
 ** keyPressEvent of the window
 ** @QKeyEvent * keyset: pressed key

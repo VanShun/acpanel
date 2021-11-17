@@ -51,6 +51,8 @@ public:
     void showTimersetPanel(bool visible);
 
     void timerset_chgvalue(double value);
+
+    void updateSettedTemp(double value);
 protected:
     virtual void keyPressEvent(QKeyEvent *keyset) override;
 
